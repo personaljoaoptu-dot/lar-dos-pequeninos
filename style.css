@@ -1562,3 +1562,529 @@ img {
         padding: 1.25rem 1.5rem;
     }
 }
+
+/* ==========================================================================
+   COMPONENTE: Transparência & Prestação de Contas (transparencia.html)
+   ========================================================================== */
+.section-transparency-page {
+    padding: var(--spacing-4xl, 4rem) 0;
+    background-color: var(--color-background, #F8FAFC);
+}
+
+.document-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+    .document-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .document-categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.doc-cat-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.doc-cat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+    border-color: #93C5FD;
+}
+
+.doc-cat-card i {
+    font-size: 2rem;
+    color: #1E3A8A;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.doc-cat-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.5rem;
+}
+
+.doc-cat-card p {
+    font-size: 0.938rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.documents-empty-state {
+    margin-top: 2rem;
+}
+
+.empty-state-card {
+    background: #FFFFFF;
+    border: 2px dashed #CBD5E1;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    background: #EFF6FF;
+    color: #1E3A8A;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.empty-state-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.empty-state-card p {
+    font-size: 1rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-action {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   COMPONENTE: Bloco de Impacto (index.html)
+   ========================================================================== */
+.impact-section {
+    padding: 2.5rem 0;
+    background-color: #FFFFFF;
+}
+
+.impact-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.impact-main-highlight {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.impact-big-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #1E3A8A;
+}
+
+.impact-main-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.25rem;
+}
+
+.impact-main-info p {
+    font-size: 0.938rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.impact-stats-list {
+    display: flex;
+    gap: 2.5rem;
+    border-left: 1px solid #E2E8F0;
+    padding-left: 2.5rem;
+}
+
+.impact-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #059669;
+}
+
+.stat-lbl {
+    font-size: 0.875rem;
+    color: #64748B;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   COMPONENTE: Quem Somos & O Lar (index.html, o-lar.html)
+   ========================================================================== */
+.section-about, .section-lar {
+    padding: 4rem 0;
+}
+
+.about-text-col, .lar-text-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-lead {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.about-actions, .lar-actions {
+    margin-top: 1.25rem;
+}
+
+.about-visual-col {
+    position: relative;
+}
+
+.editorial-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+    object-fit: cover;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+}
+
+/* ==========================================================================
+   COMPONENTE: Como Ajudar (como-ajudar.html, index.html)
+   ========================================================================== */
+.section-help, .section-help-page {
+    padding: 4rem 0;
+}
+
+.help-options-grid, .help-options-grid-internal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.help-opt-card, .help-card-full {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.help-opt-card:hover, .help-card-full:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+}
+
+.help-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.opt-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.875rem;
+    background: #EFF6FF;
+    color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.help-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 0.25rem 0;
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.help-card-desc {
+    font-size: 0.938rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.status-notice-box {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    padding: 0.875rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.84rem;
+    color: #64748B;
+    margin-bottom: 1.25rem;
+}
+
+.status-notice-box i {
+    color: #1E3A8A;
+}
+
+.help-card-footer {
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   COMPONENTE: Localização & Contato (contato.html, index.html)
+   ========================================================================== */
+.section-location {
+    padding: 4rem 0;
+    background-color: #F8FAFC;
+}
+
+.location-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.location-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.c-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.c-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 0.875rem;
+    background: #EFF6FF;
+    color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+
+.c-detail-item strong {
+    display: block;
+    font-size: 0.938rem;
+    color: #0F172A;
+    margin-bottom: 0.125rem;
+}
+
+.c-detail-item p {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.map-card-container {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.map-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-pin-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #1E3A8A;
+}
+
+.map-visual-placeholder {
+    padding: 3rem;
+    text-align: center;
+    background: #F8FAFC;
+}
+
+/* ==========================================================================
+   COMPONENTE: Galeria & Lightbox (galeria.html)
+   ========================================================================== */
+.section-structure {
+    padding: 4rem 0;
+}
+
+.structure-tab-bar {
+    margin-bottom: 2rem;
+}
+
+.tab-scroll-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+}
+
+.gallery-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tile-cat {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1E3A8A;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.lightbox-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.lightbox-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-modal {
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 540px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+}
+
+.lightbox-backdrop.active .lightbox-modal {
+    transform: scale(1);
+}
+
+.lightbox-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #EFF6FF;
+    color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   COMPONENTE: Footer & Drawer (Global)
+   ========================================================================== */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.brand-col, .nav-col, .contact-col, .social-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Helper classes */
+.hero-content, .hero-visual, .location-map-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-editorial-header, .gallery-notice-footer, .location-actions {
+    margin-top: 1.5rem;
+}
+
+
