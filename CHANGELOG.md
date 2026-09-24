@@ -4,30 +4,46 @@ Todas as alterações e validações efetuadas no website institucional do Lar d
 
 ---
 
+## [1.3.0] - 2026-09-24
+
+### 📱 Ajuste Fino de Responsividade & Organização de Media Queries (Responsive Overrides)
+- **Reorganização de Cascata no `style.css`**: Reestruturadas todas as regras base de componentes para antecederem o bloco final `/* RESPONSIVE OVERRIDES & MEDIA QUERIES */`, garantindo que as regras de adaptação para 1024px, 768px, 640px, 390px e 375px tenham precedência absoluta na cascata CSS.
+- **Componentes Ajustados por Resolução**:
+  - **`.impact-panel`**:
+    - *Desktop (1440px)*: Layout em fluxo horizontal (`flex-direction: row`), divisória à esquerda (`border-left: 0.8px solid #E2E8F0`).
+    - *Tablet (1024px e 768px)*: Transição para fluxo vertical (`flex-direction: column`); divisória alterada para o topo (`border-top: 0.8px solid #E2E8F0`).
+    - *Mobile (390px e 375px)*: Bloco `.impact-main-highlight` e indicadores `.impact-stats-list` empilhados verticalmente com alinhamento centralizado.
+  - **`.document-categories-grid` (`transparencia.html`)**:
+    - *1440px*: 4 colunas (`280px` por card).
+    - *1024px e 768px*: 2 colunas (`repeat(2, 1fr)`).
+    - *390px e 375px*: 1 coluna (`1fr`).
+  - **`.help-options-grid` & `.help-options-grid-internal` (`como-ajudar.html`)**:
+    - *1440px*: 2 colunas (`580px` cada).
+    - *768px, 390px e 375px*: 1 coluna vertical.
+  - **`.location-layout` (`contato.html` / `index.html`)**:
+    - *1440px*: 2 colunas (`1fr 1fr`).
+    - *1024px e abaixo*: 1 coluna vertical.
+  - **`.gallery-masonry` & `.lightbox-modal` (`galeria.html`)**:
+    - *1440px*: 3 colunas; modal com largura max de `540px`.
+    - *1024px*: 2 colunas.
+    - *390px e 375px*: 1 coluna; modal responsivo (`width: 92%`, `341px` de largura no iPhone).
+  - **`.empty-state-card`**:
+    - *Mobile (390px e 375px)*: Padding ajustado de `48px 32px` para `32px 20px`, mantendo respiro e alinhamento central.
+
+- **Resultado dos Testes no Browser Subagent (5 Resoluções)**:
+  - **1440px × 900px**: Layouts em múltiplas colunas conformes ao Design System.
+  - **1024px × 768px**: Grids adaptados sem compressão.
+  - **768px × 1024px**: Empilhamento de 2 colunas em 1 coluna quando necessário.
+  - **390px × 844px e 375px × 812px**:
+    - **Zero Estouro Horizontal**: `scrollWidth <= innerWidth` em todas as páginas.
+    - **Zero Erros de Console**: 0 exceptions/runtime errors em todas as 8 rotas HTML.
+
+---
+
 ## [1.2.0] - 2026-09-24
 
 ### 🛠️ Correção da Regressão CSS Global & Restauração Completa de Componentes
-- **Causa Raiz Identificada**: Auditoria automatizada revelou 56 classes estruturais presentes nos arquivos HTML que não possuíam seletores definidos em `style.css`, fazendo com que seções como Transparência, Bloco de Impacto, Como Ajudar, Galeria e Localização renderizassem sem o layout editorial.
-- **Resolução**: Mapeamento 100% concluído (186/186 classes HTML mapeadas em `style.css`).
-- **Componentes Restaurados no `style.css`**:
-  - **`transparencia.html`**:
-    - `.section-transparency-page`: Espaçamentos e cor de fundo institucional.
-    - `.document-categories-grid` e `.doc-cat-card`: Grid de 4 colunas no desktop, 2 no tablet e 1 no mobile com cards brancos, borda `#E2E8F0`, raio de 16px, sombra leve e efeito hover elevation.
-    - `.documents-empty-state`, `.empty-state-card`, `.empty-icon`, `.empty-action`: Card centralizado com borda pontilhada (dashed `#CBD5E1`), ícone circular com fundo `#EFF6FF` e botão de ação.
-  - **`index.html`**:
-    - `.impact-section`, `.impact-panel`, `.impact-main-highlight`, `.impact-big-num`, `.impact-stats-list`, `.impact-stat-item`, `.stat-num`, `.stat-lbl`: Bloco de impacto e contadores.
-    - `.section-about`, `.about-editorial`, `.about-text-col`, `.about-visual-col`, `.about-actions`, `.editorial-img`: Seção Quem Somos.
-    - `.section-location`, `.location-layout`, `.location-text-col`, `.location-map-col`, `.contact-details`, `.c-detail-item`, `.c-icon-badge`, `.map-card-container`, `.map-card-header`, `.map-pin-badge`: Seção de localização e mapa.
-  - **`como-ajudar.html`**:
-    - `.section-help-page`, `.help-options-grid-internal`, `.help-card-full`, `.help-card-header`, `.badge-status`, `.status-notice-box`, `.help-card-desc`, `.help-card-footer`: Grid de 2 colunas e cards de apoio.
-  - **`galeria.html`**:
-    - `.section-structure`, `.structure-tab-bar`, `.tab-scroll-container`, `.gallery-masonry`, `.tile-cat`, `.lightbox-backdrop`, `.lightbox-modal`, `.lightbox-icon-box`: Filtros de categoria e modal Lightbox.
-  - **Global**:
-    - `.brand-col`, `.nav-col`, `.contact-col`, `.social-col`, `.footer-brand`, `.drawer-btn`: Layout do rodapé e botão do menu mobile.
-
-- **Validação no Navegador Real (Browser Subagent)**:
-  - `transparencia.html`: Confirmados estilos computados (`display: grid`, `gridTemplateColumns: 280px 280px 280px 280px`, `doc-cat-card` background `#FFF`, border `#E2E8F0`, shadow e hover; `empty-state-card` com border dashed `#CBD5E1` e padding `48px`).
-  - Zero erros no console.
+- Mapeamento de 100% das 186 classes estruturais no `style.css`.
 
 ---
 
